@@ -7,7 +7,7 @@
 'metrics':
   'userId': 'a3cab92c46583a11173e220625d223bf5c4ddabd'
 'editor':
-  'fontSize': 16
+  'fontSize': 12
 'core':
   'themes': [
     'atom-dark-ui'
