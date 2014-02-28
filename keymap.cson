@@ -16,3 +16,7 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
+
+'body':
+  'ctrl-shift-right': 'window:focus-pane-on-right'
+  'ctrl-shift-left' : 'window:focus-pane-on-left'
