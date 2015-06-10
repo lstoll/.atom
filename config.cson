@@ -1,20 +1,15 @@
-'exception-reporting':
-  'userId': '6002d86a-d8f3-ce09-b3af-a54e08818d5f'
-'release-notes':
-  'viewedVersion': '0.61.0'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': 'a3cab92c46583a11173e220625d223bf5c4ddabd'
-'editor':
-  'fontSize': 12
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'atom-dark-syntax'
-  ]
-  'ignoredNames': [
-    '.git'
-    '.svn'
-    '.DS_Store'
-  ]
+"*":
+  "exception-reporting":
+    userId: "f4ef2d3f-e22a-6487-c736-917d02e89a79"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    invisibles:
+      {}
+    fontSize: 13
+    fontFamily: "Monaco"
