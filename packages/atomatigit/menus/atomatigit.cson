@@ -1,0 +1,132 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.atomatigit .staged .file': [
+    {
+      'label': 'Unstage (U)'
+      'command': 'atomatigit:unstage'
+    }
+    {
+      'label': 'Discard changes (⌫)'
+      'command': 'atomatigit:kill'
+    }
+    {
+      'label': 'Toggle diff (⇥)'
+      'command': 'atomatigit:toggle-diff'
+    }
+  ]
+
+  '.atomatigit .unstaged .file': [
+    {
+      'label': 'Stage (⇧S)'
+      'command': 'atomatigit:stage'
+    }
+    {
+      'label': 'Discard changes (⌫)'
+      'command': 'atomatigit:kill'
+    }
+    {
+      'label': 'Toggle diff (⇥)'
+      'command': 'atomatigit:toggle-diff'
+    }
+  ]
+
+  '.atomatigit .untracked .file': [
+    {
+      'label': 'Stage (⇧S)'
+      'command': 'atomatigit:stage'
+    }
+    {
+      'label': 'Delete file (⌫)'
+      'command': 'atomatigit:kill'
+    }
+  ]
+
+  '.atomatigit .file-list-view': [
+    {
+      'label': 'Commit (c)'
+      'command': 'atomatigit:commit'
+    }
+    {
+      'label': 'Fetch (p)'
+      'command': 'atomatigit:fetch'
+    }
+    {
+      'label': 'Push (⇧P)'
+      'command': 'atomatigit:push'
+    }
+    {
+      'label': 'Stash (z)'
+      'command': 'atomatigit:push'
+    }
+    {
+      'label': 'Stash pop (⇧Z)'
+      'command': 'atomatigit:push'
+    }
+  ]
+
+  '.atomatigit .file': [
+    {
+      'label': 'Open File (↩)'
+      'command': 'atomatigit:open'
+    }
+  ]
+
+  '.atomatigit': [
+    {
+      'label': 'Close (⎋)'
+      'command': 'atomatigit:close'
+    }
+    {
+      'label': 'Refresh (r)'
+      'command': 'atomatigit:refresh'
+    }
+    {
+      'label': 'Git command (:)'
+      'command': 'atomatigit:git-command'
+    }
+  ]
+
+  '.atomatigit .branch-list-view .branch-brief-view': [
+    {
+      'label': 'Checkout (↩)'
+      'command': 'atomatigit:open'
+    }
+    {
+      'label': 'Delete branch (⌫)'
+      'command': 'atomatigit:kill'
+    }
+  ]
+
+  '.atomatigit .branch-list-view': [
+    {
+      'label': 'Create Branch (c)'
+      'command': 'atomatigit:create-branch'
+    }
+  ]
+
+  '.atomatigit .commit-list-view .commit': [
+    {
+      'label': 'Soft reset (↩)'
+      'command': 'atomatigit:open'
+    }
+    {
+      'label': 'Hard reset (⇧↩)'
+      'command': 'atomatigit:hard-reset-to-commit'
+    }
+    {
+      'label': 'Show Commit (o)'
+      'command': 'atomatigit:showCommit'
+    }
+  ]
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'atomatigit'
+      'submenu': [
+        { 'label': 'Show', 'command': 'atomatigit:show' }
+      ]
+    ]
+  }
+]

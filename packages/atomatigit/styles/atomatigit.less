@@ -1,0 +1,232 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "octicon-mixins";
+.box-sizing (@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing: @type;
+  box-sizing: @type;
+}
+@units: 0.1em;
+@close-icon-size: 12px;
+@dark-background: darken(@tree-view-background-color, 5%);
+
+.atomatigit {
+  position: relative;
+  overflow: auto;
+  width: 300 * @units;
+  padding: 0px;
+  border-left: 1px solid @tree-view-border-color;
+  background-color: darken(@tree-view-background-color, 5%);
+  color: @text-color;
+
+
+  .hidden {
+    display: none;
+  }
+
+  .spinner {
+    position: absolute;
+    top: 15 * @units;
+    left: 15 * @units;
+    display: none;
+  }
+
+  .resize-handle {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    cursor: col-resize;
+  }
+
+  .input {
+    background-color: @dark-background;
+    .box-sizing();
+    width: 100%;
+    padding: 0px 15 * @units 10 * @units;
+    margin: 0px;
+    display: none;
+    &.block {
+      atom-text-editor {
+        height: 100px;
+      }
+    }
+  }
+
+  .commit-list-view {
+    .commit {
+      padding: 5 * @units 0px;
+      .id {
+        font-weight: bold;
+        display: inline-block;
+        padding-left: 15 * @units;
+      }
+      .author-name {
+        font-style: italic;
+        display: inline-block;
+        padding-left: 5 * @units;
+      }
+      .message {
+        padding-left: 15 * @units;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space:nowrap;
+      }
+    }
+  }
+  .file {
+    .mode {
+      padding: 5 * @units;
+      padding-left: 25 * @units;
+    }
+
+    .diff {
+      font-family: monospace;
+
+      .diff-chunk {
+        padding: 10*@units 0px;
+        border-bottom: 1px solid @tree-view-border-color;
+        &.selected {
+          background-color: #fff;
+        }
+        .diff-line {
+          padding-left: 25 * @units;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space:nowrap;
+
+          &.addition {
+            background-color: mix(@background-color-success,
+                                  @tree-view-background-color, 15%);
+          }
+
+          &.subtraction {
+            background-color: mix(@background-color-error,
+                                  @tree-view-background-color, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    padding-left: 15 * @units;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .branch-brief-view {
+    padding: 5 * @units;
+    padding-left: 25 * @units;
+
+    .name {
+      margin: 0px;
+      font-weight: bold;
+    }
+
+    .commit {
+      font-style: italic;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space:nowrap;
+    }
+
+    &:hover {
+      background-color: @button-background-color-hover;
+      cursor: pointer;
+    }
+  }
+
+  .current-branch-view {
+    text-align: right;
+    padding: 20 * @units;
+    padding-bottom: 10 * @units;
+    background-color: @dark-background;
+    &.selected {
+      background-color: @dark-background;
+    }
+    &.unpushed {
+      color: @text-color-warning;
+    }
+    .name {
+      display: block;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .commit {
+      display: block;
+    }
+    &:hover {
+      background-color: @dark-background;
+    }
+  }
+
+  &.focused {
+    background-color: darken(@tree-view-background-color, 2%);
+    .selected .filename, .branch-brief-view.selected, .commit.selected, .file.selected {
+      background-color: @background-color-selected;
+      .message {
+        color: @text-color;
+      }
+    }
+
+    border-left: solid 1px @background-color-selected;
+    .current-branch-view .name {
+      color: @background-color-selected;
+    }
+  }
+  .tab-bar {
+    display: -webkit-flex;
+  	margin: 0px;
+    margin-bottom: 30 * @units;
+    border-bottom: 0px #fff;
+    background: @dark-background;
+    .tab {
+      -webkit-flex: 1;
+      font-size: 11px;
+      position: relative;
+      padding-left: 10px;
+      padding-right: 10px;
+      max-width: 100px;
+      min-width: 40px;
+      &.active {
+        -webkit-flex: 2;
+      }
+      .title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        &:first-letter {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.atomatigit-error {
+  .error-message {
+    background-color: #000;
+    color: #FF6600;
+  }
+}
+
+.meta.diff.range.unified {
+  color: @text-color-info;
+}
+
+.meta.diff.header {
+  color: @text-color-info;
+}
+
+.markup.deleted.diff {
+  color: @text-color-error;
+}
+
+.markup.inserted.diff {
+  color: @text-color-success;
+}

@@ -1,0 +1,34 @@
+'.platform-darwin atom-workspace':
+  'cmd-alt-g': 'atomatigit:toggle'
+
+'.platform-win32 atom-workspace, .platform-linux atom-workspace':
+  'ctrl-alt-g': 'atomatigit:toggle'
+
+'.atomatigit .file-list-view, .atomatigit .branch-list-view, .atomatigit .commit-list-view':
+  'j': 'core:move-down'
+  'k': 'core:move-up'
+  'escape': 'core:cancel'
+  'enter': 'atomatigit:open'
+  'backspace': 'atomatigit:kill'
+  'b': 'atomatigit:branches'
+  'f': 'atomatigit:files'
+  'l': 'atomatigit:commit-log'
+  ':': 'atomatigit:git-command'
+  'r': 'atomatigit:refresh'
+  'shift-p': 'atomatigit:push'
+  'p': 'atomatigit:fetch'
+
+'.atomatigit .file-list-view':
+  'shift-s': 'atomatigit:stage'
+  'z': 'atomatigit:stash'
+  'shift-z': 'atomatigit:stash-pop'
+  'u': 'atomatigit:unstage'
+  'tab': 'atomatigit:toggle-diff'
+  'c': 'atomatigit:commit'
+
+'.atomatigit .branch-list-view':
+  'c': 'atomatigit:create-branch'
+
+'.atomatigit .commit-list-view':
+  'shift-enter': 'atomatigit:hard-reset-to-commit'
+  'o': 'atomatigit:showCommit'
